@@ -50,11 +50,10 @@ public class RegistrationController {
 
 	@RequestMapping(value = "/registration", method = RequestMethod.POST)
 	public String registerCustomer(@ModelAttribute("registerCustomerForm")@Valid RegisterCustomerForm registerCustomerForm, BindingResult bindingResult) {
+		registerCustomerValidator.validate(registerCustomerForm, bindingResult);
 
 		if(bindingResult.hasErrors()) {
-			System.out.println(bindingResult.getAllErrors());
-			System.out.println(bindingResult.getFieldErrorCount());
-			registerCustomerValidator.validate(registerCustomerForm, bindingResult);
+			
 			return "registration";
 		}else 
 		customerService.registerCustomer(registerCustomerForm.getCustomer(),registerCustomerForm.getPassword(), registerCustomerForm.getPasswordConfirm());
