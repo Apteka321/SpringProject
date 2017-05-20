@@ -25,7 +25,7 @@
 	<http auto-config='true' use-expressions="true">
 		<intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/customer-account" access="hasRole('ROLE_CUSTOMER')"  />
-		<form-login login-page="/admlogin" default-target-url="/admin" />
+		<form-login login-page="/admlogin" default-target-url="/admin" authentication-failure-url="/loginfailed" />
 		<logout logout-url="/logout" logout-success-url="/admin" />
 		<access-denied-handler error-page="/logout" />
 		

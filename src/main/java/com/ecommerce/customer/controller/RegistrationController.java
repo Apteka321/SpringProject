@@ -22,6 +22,8 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ecommerce.customer.controller.validator.RegisterCustomerValidator;
 import com.ecommerce.customer.domain.Customer;
@@ -52,15 +54,15 @@ public class RegistrationController {
 	public String registerCustomer(@ModelAttribute("registerCustomerForm")@Valid RegisterCustomerForm registerCustomerForm, BindingResult bindingResult) {
 		registerCustomerValidator.validate(registerCustomerForm, bindingResult);
 
-		if(bindingResult.hasErrors()) {
-			
+		if(bindingResult.hasErrors()) {			
 			return "registration";
 		}else 
 		customerService.registerCustomer(registerCustomerForm.getCustomer(),registerCustomerForm.getPassword(), registerCustomerForm.getPasswordConfirm());
 	
 		return "redirect:registration?success=true";
-
 	}
+	
+
 
 	@ModelAttribute("registerCustomerForm")
 	public RegisterCustomerForm initCustomerRegistrationForm() {

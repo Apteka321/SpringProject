@@ -9,9 +9,21 @@
 
 
 <header id="fh5co-header" role="banner">
+					
+</div>
+Language:
+
+	<a href="?language=pl" >polski</a> |
+ 	<a href="?language=pl" >anglieski</a>
+
+
 	<nav class="navbar navbar-default navbar-custom" role="navigation">
+
 		<div class="container-fluid">
+
 			<div class="navbar-header">
+			
+
 				<!-- Mobile Toggle Menu Button -->
 				<a href="#"
 					class="js-fh5co-nav-toggle fh5co-nav-toggle visible-xs-block"
@@ -35,7 +47,7 @@
 							<li><a href="/customer-account"><span> <span
 								class="glyphicon glyphicon-user"></span><sec:authentication property="name"/> <span
 								class="border"></span></span></a></li>
-					<li><a href="logout"><span> <span
+					<li><a href="customer-logout"><span> <span
 								class="glyphicon glyphicon-align-left"></span>
 								</button> Sign out <span class="border"></span></span></a></li>
 						

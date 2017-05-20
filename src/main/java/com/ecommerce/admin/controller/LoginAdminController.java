@@ -20,10 +20,19 @@ public class LoginAdminController {
 		return "admlogin";
 	}
 
+	@RequestMapping(value = "/loginfailed", method = RequestMethod.GET)
+	public String loginerror(Model model) {
+		model.addAttribute("error", "true");
+		return "admlogin";
+	}
 
+	@RequestMapping("/customer-logout")
+	public String customerLogoutPage() {
+		return "customer-logout";
+	}
 
 	@RequestMapping("/logout")
-	public String logoutPage() {
+	public String adminLogoutPage() {
 		return "logout";
 	}
 }
