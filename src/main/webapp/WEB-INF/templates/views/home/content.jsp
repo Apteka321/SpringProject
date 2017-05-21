@@ -6,9 +6,11 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!-- Carousel
 ================================================== -->
-
+<div class="container-fluid" >
+<div class="row">
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
 	<!-- Indicators -->
 	<ol class="carousel-indicators">
 		<li data-target="#myCarousel" data-slide-to="0" class=""></li>
@@ -52,7 +54,8 @@
 </div>
 <!-- /.carousel -->
 
-
+</div>
+</div>
 <!-- Marketing messaging and featurettes
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->

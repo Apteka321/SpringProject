@@ -16,6 +16,8 @@
 <link rel="stylesheet" type="text/css"
 	href="<c:url value="/resources/css/styles.css"/>">
 <link rel="icon" href="../../favicon.ico">
+
+<link rel="stylesheet" type="text/css" href='<c:url value="/resources/css/carousel.css"/>' >
 <!-- Bootstrap core CSS -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

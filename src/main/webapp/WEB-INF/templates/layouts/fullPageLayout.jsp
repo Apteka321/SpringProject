@@ -16,14 +16,12 @@
 <body>
 
 	<div class="container">
-		<div class="row">
 			<t:insertAttribute name="navbar" />
 
 			<t:insertAttribute name="content" />
 
 			<t:insertAttribute name="footer" />
 			<t:insertAttribute name="footerScripts" />
-		</div>
 	</div>
 
 
