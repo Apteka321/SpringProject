@@ -28,7 +28,7 @@ public class LoginAdminController {
 
 	@RequestMapping("/customer-logout")
 	public String customerLogoutPage() {
-		return "customer-logout";
+		return "logout";
 	}
 
 	@RequestMapping("/logout")
